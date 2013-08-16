@@ -1,7 +1,7 @@
 {
-    "name": "asphyxia/contentfixer",
-    "description": "Content Fixer",
-    "keywords": ["silex"],
+    "name": "asphyxia/tpb-hydra-component-contentfixer",
+    "description": "TPB Hydra proxy Content Fixer",
+    "keywords": ["tpb proxy hydra"],
     "license": "MIT",
     "require": {
         "silex/silex": "1.0.*@dev"
