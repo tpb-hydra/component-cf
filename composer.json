@@ -1,5 +1,5 @@
 {
-    "name": "asphyxia/tpb-hydra-component-contentfixer",
+    "name": "tpb-hydra/component-cf",
     "description": "TPB Hydra proxy Content Fixer",
     "keywords": ["tpb proxy hydra"],
     "license": "MIT",
@@ -7,6 +7,6 @@
         "silex/silex": "1.0.*@dev"
     },
     "autoload": {
-        "psr-0": { "Asphyxia\\Hydra": "src" }
+        "psr-0": { "Hydra\\Component\\ContentFixer": "src" }
     }
 }
