@@ -1,11 +1,12 @@
 {
     "name": "tpb-hydra/component-cf",
     "description": "TPB Hydra proxy Content Fixer",
-    "keywords": ["tpb proxy hydra"],
-    "license": "GPLv3",
+    "keywords": ["tpb", "proxy", "hydra"],
+    "license": "GPL-3.0",
     "authors": {
         "name": "DC*",
-        "email": "dc@syncr.com.ar"
+        "email": "dc@syncr.com.ar",
+        "homepage": "http://devl.com.ar"
     },
     "require": {
         "silex/silex": "~1.0."
