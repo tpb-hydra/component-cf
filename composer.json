@@ -2,9 +2,13 @@
     "name": "tpb-hydra/component-cf",
     "description": "TPB Hydra proxy Content Fixer",
     "keywords": ["tpb proxy hydra"],
-    "license": "MIT",
+    "license": "GPLv3",
+    "authors": {
+        "name": "DC*",
+        "email": "dc@syncr.com.ar"
+    },
     "require": {
-        "silex/silex": "1.0.*@dev"
+        "silex/silex": "~1.0."
     },
     "autoload": {
         "psr-0": { "Hydra\\Component\\ContentFixer": "src" }
