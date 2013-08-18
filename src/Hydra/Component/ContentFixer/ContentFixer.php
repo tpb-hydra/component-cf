@@ -3,34 +3,58 @@ namespace Hydra\Component\ContentFixer;
 
 use Silex\Application;
 use Silex\ServiceProviderInterface;
-use Symfony\Component\Yaml\Yaml;
 
-
+/**
+ * Provides configurable content sanitization and replacement.
+ */
 class ContentFixer implements ServiceProviderInterface
 {
     protected $arrRegEx;
-    public function __construct($regEx) {
+
+    /**
+     * Accepts a multidimentional array of search and replace strings (or regex)
+     * @param Array $arrRegEx
+     */
+    public function __construct(Array $arrRegEx)
+    {
       $this->arrRegEx = $regEx;
     }
 
-    public function fix($content) {
-      foreach ($this->arrRegEx as $key => $regEx){
+    /**
+     * Sanitizes the string $content
+     * @param String $content
+     *
+     * @return String
+     */
+    public function fix($content)
+    {
+      foreach ($this->arrRegEx as $key => $regEx) {
         if (is_array($regEx)) {
            list($regEx, $replace) = each($regEx);
-        }else{
+        } else {
            $replace = '';
         }
 
         $content = preg_replace($regEx, $replace, $content);
       }
+
       return $content;
     }
 
-    public function register(Application $app) {
+    /**
+     * Register the component
+     * @param Silex\Application $app
+     */
+    public function register(Application $app)
+    {
        $app['fixer'] = $this;
     }
 
-    public function boot(Application $app) {
+    /**
+     * Boots the component
+     * @param Silex\Application $app
+     */
+    public function boot(Application $app)
+    {
     }
 }
-?>
